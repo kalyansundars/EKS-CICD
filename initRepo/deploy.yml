@@ -1,0 +1,48 @@
+[?1000h[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;100r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[100;1H"/var/folders/km/df689hhd77b_33d2znp1fkwr0000gr/T/kubectl-edit-1541376241.yaml" 89L, 3250B[1;1H[34m# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#[m
+[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment
+[36mmetadata[m[35m:[m
+  [36mannotations[m[35m:[m
+    [36mdeployment.kubernetes.io/revision[m[35m:[m [31m"2"[m
+    [36mkubectl.kubernetes.io/last-applied-configuration[m[35m:[m |[11;7H[35m{[m[31m"apiVersion"[m[35m:[m[31m"apps/v1"[m,[31m"kind"[m[35m:[m[31m"Deployment"[m,[31m"metadata"[m[35m:{[m[31m"annotations"[m[35m:{}[m,[31m"name"[m[35m:[m[31m"go-hello-world"[m,[31m"namespace"[m[35m:[m[31m"default"[m[35m}[m,[31m"spec"[m[35m:{[m[31m"replicas"[m[35m:[m1,[31m"selector"[m[35m:{[m[31m"matchLabels"[m[35m:{[m[31m"app"[m[35m:[m[31m"go-hello-world"[m[35m}}[m,[31m"template"[m[35m:{[m[31m"metadata"[m[35m:{[m[31m"labels"[m[35m:{[m[31m"app"[m[35m:[m[31m"go-hello-world"[m[35m}}[m,[31m"spec"[m[35m:{[m[31m"containers"[m[35m:[{[m[31m"image"[m[35m:[m[31m"020887905290.dkr.ecr.us-east-1.amazonaws.com/golang-microservice:latest"[m,[31m"imm[12;1HagePullPolicy"[m[35m:[m[31m"IfNotPresent"[m,[31m"livenessProbe"[m[35m:{[m[31m"httpGet"[m[35m:{[m[31m"path"[m[35m:[m[31m"/health"[m,[31m"port"[m[35m:[m8080,[31m"scheme"[m[35m:[m[31m"HTTP"[m[35m}[m,[31m"initialDelaySeconds"[m[35m:[m5,[31m"periodSeconds"[m[35m:[m15,[31m"timeoutSeconds"[m[35m:[m5[35m}[m,[31m"name"[m[35m:[m[31m"golang-microservice"[m,[31m"ports"[m[35m:[{[m[31m"containerPort"[m[35m:[m8080[35m}][m,[31m"readinessProbe"[m[35m:{[m[31m"httpGet"[m[35m:{[m[31m"path"[m[35m:[m[31m"/readiness"[m,[31m"port"[m[35m:[m8080,[31m"scheme"[m[35m:[m[31m"HTTP"[m[35m}[m,[31m"initialDelaySeconds"[m[35m:[m5,[31m"timeoutSeconds"[m[35m:[m1[35m}}]}}}}[m
+  [36mcreationTimestamp[m[35m:[m [31m"2022-11-11T17:55:41Z"[m
+  [36mgeneration[m[35m:[m [31m2[m
+  [36mname[m[35m:[m go-hello-world
+  [36mnamespace[m[35m:[m default
+  [36mresourceVersion[m[35m:[m [31m"6973900"[m
+  [36muid[m[35m:[m a074d757-5dae-468f-a69e-803f6a800271
+[36mspec[m[35m:[m
+  [36mprogressDeadlineSeconds[m[35m:[m [31m600[m
+  [36mreplicas[m[35m:[m [31m1[m
+  [36mrevisionHistoryLimit[m[35m:[m [31m10[m
+  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[25;7H[36mapp[m[35m:[m go-hello-world
+  [36mstrategy[m[35m:[m
+    [36mrollingUpdate[m[35m:[m[28;7H[36mmaxSurge[m[35m:[m 25%[29;7H[36mmaxUnavailable[m[35m:[m 25%
+    [36mtype[m[35m:[m RollingUpdate
+  [36mtemplate[m[35m:[m
+    [36mmetadata[m[35m:[m[33;7H[36mcreationTimestamp[m[35m:[m [31mnull[m[34;7H[36mlabels[m[35m:[m[35;9H[36mapp[m[35m:[m go-hello-world
+    [36mspec[m[35m:[m[37;7H[36mcontainers[m[35m:[m[38;7H[38;5;130m- [m[36mimage[m[35m:[m 020887905290.dkr.ecr.us-east-1.amazonaws.com/golang-microservice:latest[39;9H[36mimagePullPolicy[m[35m:[m IfNotPresent[40;9H[36mlivenessProbe[m[35m:[m[41;11H[36mfailureThreshold[m[35m:[m [31m3[m[42;11H[36mhttpGet[m[35m:[m[43;13H[36mpath[m[35m:[m /health[44;13H[36mport[m[35m:[m [31m8080[m[45;13H[36mscheme[m[35m:[m HTTP[46;11H[36minitialDelaySeconds[m[35m:[m [31m5[m[47;11H[36mperiodSeconds[m[35m:[m [31m15[m[48;11H[36msuccessThreshold[m[35m:[m [31m1[m[49;11H[36mtimeoutSeconds[m[35m:[m [31m5[m[50;9H[36mname[m[35m:[m golang-microservice[51;9H[36mports[m[35m:[m[52;9H[38;5;130m- [m[36mcontainerPort[m[35m:[m [31m8080[m[53;11H[36mprotocol[m[35m:[m TCP[54;9H[36mreadinessProbe[m[35m:[m[55;11H[36mfailureThreshold[m[35m:[m [31m3[m[56;11H[36mhttpGet[m[35m:[m[57;13H[36mpath[m[35m:[m /readiness[58;13H[36mport[m[35m:[m [31m8080[m[59;13H[36mscheme[m[35m:[m HTTP[60;11H[36minitialDelaySeconds[m[35m:[m [31m5[m[61;11H[36mperiodSeconds[m[35m:[m [31m10[m[62;11H[36msuccessThreshold[m[35m:[m [31m1[m[63;11H[36mtimeoutSeconds[m[35m:[m [31m1[m[64;9H[36mresources[m[35m:[m [35m{}[m[65;9H[36mterminationMessagePath[m[35m:[m /dev/termination-log[66;9H[36mterminationMessagePolicy[m[35m:[m File[67;7H[36mdnsPolicy[m[35m:[m ClusterFirst[68;7H[36mrestartPolicy[m[35m:[m Always[69;7H[36mschedulerName[m[35m:[m default-scheduler[70;7H[36msecurityContext[m[35m:[m [35m{}[m[71;7H[36mterminationGracePeriodSeconds[m[35m:[m [31m30[m
+[36mstatus[m[35m:[m
+  [36mavailableReplicas[m[35m:[m [31m1[m
+  [36mconditions[m[35m:[m
+  [38;5;130m- [m[36mlastTransitionTime[m[35m:[m [31m"2022-11-11T18:00:07Z"[m
+    [36mlastUpdateTime[m[35m:[m [31m"2022-11-11T18:00:07Z"[m
+    [36mmessage[m[35m:[m Deployment has minimum availability.
+    [36mreason[m[35m:[m MinimumReplicasAvailable
+    [36mstatus[m[35m:[m [31m"True"[m
+    [36mtype[m[35m:[m Available
+  [38;5;130m- [m[36mlastTransitionTime[m[35m:[m [31m"2022-11-11T17:55:41Z"[m
+    [36mlastUpdateTime[m[35m:[m [31m"2022-11-11T18:16:49Z"[m
+    [36mmessage[m[35m:[m ReplicaSet [31m"go-hello-world-5ff5f64cb7"[m has successfully progressed.
+    [36mreason[m[35m:[m NewReplicaSetAvailable
+    [36mstatus[m[35m:[m [31m"True"[m
+    [36mtype[m[35m:[m Progressing
+  [36mobservedGeneration[m[35m:[m [31m2[m
+  [36mreadyReplicas[m[35m:[m [31m1[m
+  [36mreplicas[m[35m:[m [31m1[m
+  [36mupdatedReplicas[m[35m:[m [31m1[m
+[94m~                                                                                                                                                                                                                                                                                                                                                                           [92;1H~                                                                                                                                                                                                                                                                                                                                                                           [93;1H~                                                                                                                                                                                                                                                                                                                                                                           [94;1H~                                                                                                                                                                                                                                                                                                                                                                           [95;1H~                                                                                                                                                                                                                                                                                                                                                                           [96;1H~                                                                                                                                                                                                                                                                                                                                                                           [97;1H~                                                                                                                                                                                                                                                                                                                                                                           [98;1H~                                                                                                                                                                                                                                                                                                                                                                           [99;1H~                                                                                                                                                                                                                                                                                                                                                                           [m[100;347H1,1[11CAll[1;1H[?25h[100;1H[?1000l[?2004l[>4;m[23;2t[23;1t[100;1H[K[100;1H[?1004l[?2004l[?1l>[>4;m[?1049l[23;0;0t

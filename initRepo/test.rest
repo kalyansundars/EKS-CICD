@@ -1,0 +1,1 @@
+GET http://k8s-default-microser-8ba9c602cd-24783539.us-east-1.elb.amazonaws.com/health

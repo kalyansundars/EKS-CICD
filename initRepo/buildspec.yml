@@ -1,0 +1,37 @@
+version: 0.2
+phases:
+  install: 
+    runtime-versions:
+      golang: 1.18
+ 
+  pre_build: 
+    commands:
+      - source `pwd`/version
+      - COMMIT_ID_SHORT=`echo "${CODEBUILD_RESOLVED_SOURCE_VERSION}" | cut -c1-8`
+      - TAG=`echo "${COMMIT_ID_SHORT}"`
+      - echo ${TAG}
+      - docker version
+      - aws --version
+      - aws ecr get-login-password --region $ACCOUNT_REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$ACCOUNT_REGION.amazonaws.com
+
+ 
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Getting packages
+      - go get ./...
+      - echo Compiling the Go code...
+      - go build -o main
+      - docker build -t $ECR_REPO:${TAG} -f Dockerfile .
+      - docker tag $ECR_REPO:${TAG} $ACCOUNT_ID.dkr.ecr.$ACCOUNT_REGION.amazonaws.com/$ECR_REPO:${TAG}
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push $ACCOUNT_ID.dkr.ecr.$ACCOUNT_REGION.amazonaws.com/$ECR_REPO:${TAG}
+      - echo Pushing Docker Image completed on `date`
+
+artifacts:
+  files:
+    - app
+    - buildspec.yml

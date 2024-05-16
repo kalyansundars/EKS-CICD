@@ -1,0 +1,11 @@
+replicaCount: 1
+app:
+  name: microservice
+  namespace: default
+  container:
+    port: 8080
+    protocol: TCP
+  service:
+    type: NodePort
+    port: 9090
+    targetPort: 8080
