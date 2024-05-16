@@ -1,9 +1,5 @@
 # Welcome to your CDK TypeScript project
 
-```
-For more details please check this link - https://apg-library.amazonaws.com/content-viewer/author/ef1accdb-64c3-40ab-a2fb-3332ae3112ee
-
-```
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
